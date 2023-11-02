@@ -38,12 +38,15 @@ git branch xxx
 // 添加当前文件夹及所有子文件夹
 git add .
 
-// 添加某个文件
+// 或添加某个文件
 git add src/index.html
 
 ```
-5. 推送
+5. 提交并推送
 ```
+// 先提交
+git commit -m "Add index.html"
+
 // 第一次推送，远程由于没有你本地刚新建的分支，所以采用
 git push origin xxx:xxx
 
