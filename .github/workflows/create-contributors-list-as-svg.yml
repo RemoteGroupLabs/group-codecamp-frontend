@@ -10,8 +10,9 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           svgPath: CONTRIBUTORS.svg
+          svgWidth: 900
           avatarSize: 148
-          avatarMargin: 10
+          avatarMargin: 20
           userNameHeight: 20
           svgTemplate: >
             <svg
