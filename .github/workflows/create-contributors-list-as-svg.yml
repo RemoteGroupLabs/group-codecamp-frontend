@@ -10,20 +10,16 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           svgPath: CONTRIBUTORS.svg
-          avatarSize: 128
-          avatarMargin: 10
+          avatarSize: 200
+          avatarMargin: 40
           userNameHeight: 20
           svgTemplate: >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              version="1.1"
-              width="{{ width }}"
-              height="{{ collaboratorsHeight }}"
-            >
-              <style>.contributor-link { cursor: pointer; }</style>
-              {{{ collaborators }}}
-            </svg>
+            <g transform="translate({{ x }}, {{ y }})">
+              <a xlink:href="{{{ url }}}" class="contributor-link" target="_blank" rel="nofollow sponsored" title="{{{ name }}}" id="{{{ name }}}">
+                <image width="{{ width }}" height="{{ height }}" xlink:href="{{{ avatar }}}" />
+                <text x="32" y="74" text-anchor="middle" alignment-baseline="middle" font-size="14">{{{ name }}}</text>
+              </a>
+            </g>
 
 
 # name: Contribute List
