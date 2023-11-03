@@ -1,31 +1,28 @@
-# name: Contributors
-# on: workflow_dispatch
-# #   schedule:
-#     # - cron: '5 * * * 0' # At 01:00 on Sunday.
-#   push:
-#     branches:
-#       - main
-# jobs:
-#   contributors:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: wow-actions/contributors-list@v1
-#         with:
-#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#           svgPath: CONTRIBUTORS.svg
-
-name: Contribute List
-on:
-    push:
-        branches:
-            - main
-
+name: Contributors
+on: workflow_dispatch
+    # schedule:
+        # - cron: '5 * * * 0' # At 01:00 on Sunday.
 jobs:
-    contrib-readme-job:
-        runs-on: ubuntu-latest
-        name: A job to automate contrib in readme
-        steps:
-            - name: Contribute List
-              uses: akhilmhdh/contributors-readme-action@v2.3.6
-              env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  contributors:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: wow-actions/contributors-list@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          svgPath: CONTRIBUTORS.svg
+
+# name: Contribute List
+# on:
+#     push:
+#         branches:
+#             - main
+
+# jobs:
+#     contrib-readme-job:
+#         runs-on: ubuntu-latest
+#         name: A job to automate contrib in readme
+#         steps:
+#             - name: Contribute List
+#               uses: akhilmhdh/contributors-readme-action@v2.3.6
+#               env:
+#                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
