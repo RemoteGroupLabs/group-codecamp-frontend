@@ -13,7 +13,7 @@ jobs:
           avatarSize: 200
           avatarMargin: 40
           userNameHeight: 20
-          svgTemplate: >
+          itemTemplate: >
             <g transform="translate({{ x }}, {{ y }})">
               <a xlink:href="{{{ url }}}" class="contributor-link" target="_blank" rel="nofollow sponsored" title="{{{ name }}}" id="{{{ name }}}">
                 <image width="{{ width }}" height="{{ height }}" xlink:href="{{{ avatar }}}" />
