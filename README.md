@@ -1,4 +1,4 @@
-# 关于本项目 [![Add contributors](https://github.com/168-platform/frontend-study/actions/workflows/append-contributors-to-wiki.yml/badge.svg)](https://github.com/168-platform/frontend-study/actions/workflows/append-contributors-to-wiki.yml)
+# 关于本项目 
 
 赴日工作-前端学习小组项目源码，作业，任务相关。
 
