@@ -5,6 +5,7 @@
 ## 开始
 
 - [新手村](https://github.com/RemoteGroupLabs/group-codecamp-frontend/wiki)
+- 实践项目一：[简易音乐网站](https://github.com/RemoteGroupLabs/group-codecamp-frontend-practice1)
 
 ## 关于作业提交
 
