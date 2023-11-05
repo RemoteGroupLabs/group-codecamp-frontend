@@ -2,6 +2,9 @@
 
 赴日工作-前端学习小组项目源码，作业，任务相关。
 
+## 开始
+
+- [新手村](https://github.com/RemoteGroupLabs/group-codecamp-frontend/wiki)
 
 ## 关于作业提交
 
