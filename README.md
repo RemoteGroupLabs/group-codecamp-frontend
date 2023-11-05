@@ -64,5 +64,12 @@ git push
 
 ## 成员简介
 
+**辅导员**
+职责：主要就是定学习计划，跟踪，技术指导，反馈答疑。
+
+**学员**
+
+职责：负责完成学习计划，完成作业，完成实战任务和产出知识文档。
+
 <!-- readme: contributors -start -->
 <!-- readme: contributors -end -->
