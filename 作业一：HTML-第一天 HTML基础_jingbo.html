@@ -7,18 +7,29 @@ https://www.google.com/
 
 <html>
     <head>
+        <meta charset="utf-8"/>
         <style></style>
-        
+        <title>Google Home</title>
     </head>
     <body>
         <header>
             <ul>
                 <li><a href="https://mail.google.com/mail/?tab=rm&ogbl">Gmail</a></li>
                 <li><a href="https://www.google.com/imghp?hl=zh-CN&tab=ri&ogbl">images</a></li>
-                <li><a href="https://www.google.co.jp/intl/zh-CN/about/products?tab=ih"><img src="F:\编程练习\Frontend-study\frontend-study\icons\bars.png"></a></li>
-                <li><a href="#"><button>Sign In</Inp></button></a></li>
+                <li><a href="https://www.google.co.jp/intl/zh-CN/about/products?tab=ih" title="Google Application">
+                    <img src="F:\编程练习\Frontend-study\frontend-study\icons\bars.png"/></a></li>
+                <li><a href="#" title="Google account"><button>Sign In</Inp></button></a></li>
             </ul>
         </header>
-        <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"/>
+        <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google logo"/>
+        <div><input id="input" class="searchbar" type="search"/>
+            <style>
+                .searchbar{
+                    height: 32px;
+                    width:400px
+                }
+            </style>
+        </div>
+
     </body>
 </html>
