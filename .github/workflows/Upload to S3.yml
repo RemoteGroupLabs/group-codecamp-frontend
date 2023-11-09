@@ -26,9 +26,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master  
 
-      - name: Install Dependencies
-        run: npm install
-        
       - name: List files in the repository
         run: |
           ls -al
