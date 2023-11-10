@@ -1,7 +1,11 @@
-# 关于本项目 [![Add contributors](https://github.com/168-platform/frontend-study/actions/workflows/append-contributors-to-wiki.yml/badge.svg)](https://github.com/168-platform/frontend-study/actions/workflows/append-contributors-to-wiki.yml)
+# 关于本项目 
 
 赴日工作-前端学习小组项目源码，作业，任务相关。
 
+## 开始
+
+- [新手村](https://github.com/RemoteGroupLabs/group-codecamp-frontend/wiki)
+- 实践项目一：[简易音乐网站](https://github.com/RemoteGroupLabs/group-codecamp-frontend-practice1)
 
 ## 关于作业提交
 
@@ -63,6 +67,14 @@ git push
 
 
 ## 成员简介
+
+**辅导员**
+
+职责：主要就是定学习计划，跟踪，技术指导，反馈答疑。
+
+**学员**
+
+职责：负责完成学习计划，完成作业，完成实战任务和产出知识文档。
 
 <!-- readme: contributors -start -->
 <!-- readme: contributors -end -->
