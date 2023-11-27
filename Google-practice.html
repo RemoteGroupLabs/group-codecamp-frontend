@@ -49,9 +49,15 @@
             .inputbox:hover{
                 background-color: brown;
             }
-            
+            .lishi{
+                height: 200px;
+                width:100%;
+                background-color: rgb(3, 119, 119);
+                display: none;
+
+            }
         </style>
-                       </head>
+    </head>
     <body>
         <header>
             <nav>
@@ -70,6 +76,13 @@
             <div class="inputbox">
             <input type="text" class="type" id="input"/>
         </div>
+        <div class="lishi" id="lishi">
+            <li>231432</li>
+            <li>231432</li>
+            <li>231432</li>
+            <li>231432</li>
+            <li>231432</li>
+        </div>
             <span class="icons">
                 <span><img src="F:\编程练习\Frontend-study\group-codecamp-frontend\icons\search.png"/></sapn>
                 <span><img src="F:\编程练习\Frontend-study\group-codecamp-frontend\icons\mic.png"/></span>
@@ -84,6 +97,16 @@
             </a>
            </div>
         </main>
-
     </body>
+    <script>
+        var inputID =document.getElementById("input");
+        inputID.addEventListener("focus",function(){
+            // debugger
+            lishi.style.display="block";
+        })
+        inputID.addEventListener("blur",function(){
+            // debugger
+            document.getElementById("lishi").style.display="none";
+        })
+    </script>
 </html>
