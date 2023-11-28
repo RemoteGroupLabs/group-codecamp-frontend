@@ -1,16 +1,86 @@
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-html{
+
+html {
     height: 100%;
     width: 100%;
 }
-body{
+
+body {
     height: 100%;
     width: 100%;
 }
-header{
+
+header {
     width: 100%;
+    position: relative;
+}
+
+nav ul {
+    position: absolute;
+    right: 2px;
+    margin: 20px;
+    display: flex;
+}
+
+nav ul li {
+    display: inline;
+    margin: 20px;
+}
+nav ul li:nth-child(1):hover a{
+    text-decoration: underline;
+}
+nav ul li:nth-child(2):hover a{
+    text-decoration: underline;
+}
+
+nav ul li:nth-child(3)::after {
+    display: none;
+    content: " ";
+    position: absolute;
+    background-color: rgba(0, 0, 0, .1);
+    width: 40px;
+    height: 40px;
+    top: 12px;
+    right: 76px;
+    border-radius: 50%;
+}
+nav ul li:nth-child(3):hover::after{
+    display: block;
+}
+nav ul li:nth-child(4):hover::after{
+    display: block;
+}
+
+nav ul li:nth-child(4)::after {
+    display: none;
+    content: " ";
+    position: absolute;
+    background-color: rgba(0, 0, 0, .1);
+    width: 40px;
+    height: 40px;
+    top: 12px;
+    right: 12px;
+    border-radius: 50%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.gb_i {
+    width: 24px;
+    height: 24px;
+    margin: -6px 0px;
+}
+
+.user {
+    width: 24px;
+    height: 24px;
+    background-image: url(icons/默认头像.png);
+    background-size: 24px;
 }
