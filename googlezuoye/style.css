@@ -18,6 +18,7 @@ header {
     font-size: small;
     width: 100%;
     position: relative;
+    height: 56px;
 }
 
 nav ul {
@@ -30,10 +31,12 @@ nav ul li {
     display: inline;
     margin: 20px 12px;
 }
-nav ul li:nth-child(1):hover a{
+
+nav ul li:nth-child(1):hover a {
     text-decoration: underline;
 }
-nav ul li:nth-child(2):hover a{
+
+nav ul li:nth-child(2):hover a {
     text-decoration: underline;
 }
 
@@ -48,10 +51,12 @@ nav ul li:nth-child(3)::after {
     right: 63.6px;
     border-radius: 50%;
 }
-nav ul li:nth-child(3):hover::after{
+
+nav ul li:nth-child(3):hover::after {
     display: block;
 }
-nav ul li:nth-child(4):hover::after{
+
+nav ul li:nth-child(4):hover::after {
     display: block;
 }
 
@@ -76,6 +81,7 @@ nav ul li a {
     width: 24px;
     height: 24px;
     margin: -6px 0px;
+    opacity: 0.6;
 }
 
 .user {
@@ -84,4 +90,66 @@ nav ul li a {
     height: 35px;
     background-image: url(icons/默认头像.png);
     background-size: 35px;
+}
+
+main {
+    height: calc(100% - 100px);
+    width: 100%;
+}
+
+.googleloug {
+    width: 100%;
+    margin: 43px 0px 11px 0px;
+    ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchBox {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.type {
+    position: relative;
+    width: 583px;
+    height: 46px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+.type textarea:focus {
+    outline: none;
+}
+
+#searcharea {
+    position: absolute;
+    left: 40px;
+    top: -3px;
+    width: 443.4px;
+    height: 27px;
+    border: none;
+    resize: none;
+    font-family: arial, sans-serif;
+    font-size: 18px;
+    font-weight: 100;
+    caret-color: rgba(0, 0, 0, 0.5);
+    -webkit-caret-color:rgba(0, 0, 0, 0.5);
+}
+#search_img{
+    position: absolute;
+    left: 20px;
+    top: 14px;
+}
+.inputbox{
+    position: relative;
+}
+#mic_img{
+    position: absolute;
+    right: 70px;
+    top: 12px;
 }
