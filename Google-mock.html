@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Search Engine</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+    
+        #header {
+            background-color: #4285f4;
+            color: white;
+            padding: 10px;
+            text-align: right;
+        }
+    
+        #header a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    
+        #search-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+    
+        #search-box {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 300px;
+            outline: none;
+            font-size: 16px;
+        }
+        #search-box:focus{
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        .input-box{
+            position: relative;
+        }
+    
+        #search-button {
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-left: 10px;
+        }
+    
+        #search-prompt {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%; /* Set the width of the prompt to match the search box */
+            background-color: white;
+            border: 1px solid #ccc;
+            border-top: none;
+            border-radius: 0 0 5px 5px;
+            max-height: 150px;
+            overflow-y: auto;
+            display: none;
+            /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); Add a subtle shadow */
+            z-index: 1; /* Ensure the prompt is above other elements */
+        }
+    
+        #search-prompt ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+    
+        #search-prompt li {
+            padding: 10px;
+            cursor: pointer;
+            border-bottom: 1px solid #ccc;
+        }
+    
+        #footer {
+            background-color: #4285f4;
+            color: white;
+            padding: 10px;
+            text-align: left;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    
+        #footer a {
+            color: white;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+    </style>
+     
+</head>
+<body>
+
+<div id="header">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+    <a href="#">Login</a>
+    <a href="#">Sign Up</a>
+</div>
+
+<div id="search-container">
+    <div class="input-box">
+        <input type="text" id="search-box" placeholder="Search...">
+        <div id="search-prompt"></div>
+    </div>
+    <button id="search-button">Search</button>
+</div>
+
+<div id="footer">
+    <a href="#">Privacy</a>
+    <a href="#">Terms</a>
+    &copy; 2022 My Search Engine
+</div>
+
+<script>
+    // Function to handle search
+    function performSearch() {
+        var searchTerm = document.getElementById('search-box').value;
+        // Log the search term to the console
+        console.log('Performing search for: ' + searchTerm);
+
+        // Save search term to history (you can replace this with actual saving logic)
+        saveSearchHistory(searchTerm);
+
+        // You can implement your search logic here
+    }
+
+    // Function to save search term to history
+    function saveSearchHistory(searchTerm) {
+        if(!searchTerm){
+            // throw  new Error("Empty string can not be saved.")
+            alert(new Error("Empty string can not be saved."))
+            return
+        }
+        // For simplicity, let's use localStorage to store search history
+        var searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
+        searchHistory.unshift(searchTerm);
+        localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
+
+        // Update the search prompt
+        updateSearchPrompt(searchHistory);
+    }
+
+    // Function to update the search prompt
+    function updateSearchPrompt(searchHistory) {
+        var promptElement = document.getElementById('search-prompt');
+        promptElement.innerHTML = '';
+
+        if (searchHistory.length > 0) {
+            var ul = document.createElement('ul');
+            searchHistory.forEach(function (term) {
+                var li = document.createElement('li');
+                li.textContent = term;
+                ul.appendChild(li);
+            });
+            promptElement.appendChild(ul);
+            promptElement.style.display = 'block';
+        } else {
+            promptElement.style.display = 'none';
+        }
+    }
+
+    // Attach the search function to the button click event
+    document.getElementById('search-button').addEventListener('click', performSearch);
+
+    // Attach the updateSearchPrompt function to the input focus event
+    document.getElementById('search-box').addEventListener('focus', function () {
+        var searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
+        updateSearchPrompt(searchHistory);
+    });
+
+    // Close the search prompt when clicking outside the input and prompt
+    document.addEventListener('click', function (event) {
+        if (!event.target.matches('#search-box') && !event.target.matches('#search-prompt')) {
+            document.getElementById('search-prompt').style.display = 'none';
+        }
+    });
+    // Attach a click event listener to the search prompt items
+</script>
