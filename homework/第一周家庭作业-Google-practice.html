@@ -2,114 +2,174 @@
     [ ] 完成当前页面已经写部分的HTML整理和CSS编写，让它看起来和Google官网一样
 -->
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <title>Google</title>
-        <style>
-            header{
-                text-align:right;
-            }
-            nav{
-                display:inline-block;
-                margin-right:100px;
-            }
-            input{
-                width:300px;
-                height:50px;
-            }
-            ul{
-                position:relative;
-                right:300px;
-                top:70px;
-            }
-            li{
-                display: inline-block;
-                background: red;
-                margin:10px;
-                padding:5px;
-                text-align:center;
-            }
+<html>
 
-            .type{
-                background-color: transparent;
-                border:0px;
-                outline: none;
-                padding-left: 25px;
+<head>
+    <title>Google</title>
+    <style>
+        header {
+            width: 100%;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        #nav_bar {
+            float: right;
+        }
+
+        #nav_bar li {
+            display: inline;
+            padding: 8px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        li.nav_links a:hover {
+            text-decoration: underline;
+        }
+
+        #sign_in:hover {
+            box-shadow: 1px 1px 5px #999;
+        }
+
+        #sign_in {
+            border-radius: 5px;
+            color: aliceblue;
+            background-color: bisque
+        }
 
 
-            }
-            .type:focus,.type:focus-visible{
-                border: 0px;
-            }
-            .inputbox{
-                border: 1px solid black;
-                border-radius: 100px;
-                padding: 10px;
-                background-color: aquamarine;
-            }
-            .inputbox:hover{
-                background-color: brown;
-            }
-            .lishi{
-                height: 200px;
-                width:100%;
-                background-color: rgb(3, 119, 119);
-                display: none;
 
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href=" ";>Gmail</a ></li>
-                    <li><a href="http://www.google.com/image/";>images</a ></li>
-                    <li><a title="Google Application"><img src="./icons/bars.png"/></a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-           <div>
-            <img src="./icons/google.png"/>
-           </div>
-           <div class="searchBox">
-            <div class="inputbox">
-            <input type="text" class="type" id="input"/>
-        </div>
-        <div class="lishi" id="lishi">
-            <li>231432</li>
-            <li>231432</li>
-            <li>231432</li>
-            <li>231432</li>
-            <li>231432</li>
-        </div>
-            <span class="icons">
-                <span><img src="./icons/search.png"/></sapn>
-                <span><img src="./icons/mic.png"/></span>
-            </span>
-           </div>
-           <div>
-            <a href="#">
-            <span class="link-box">
-                <span class="image-box"><img src="https://img2.baidu.com/it/u=688947775,1148683618&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500"/></span>
-                <p>百度</p>
-            </span>
-            </a>
-           </div>
-        </main>
-    </body>
-    <script>
-        var inputID =document.getElementById("input");
-        inputID.addEventListener("focus",function(){
-            // debugger
-            lishi.style.display="block";
-        })
-        inputID.addEventListener("blur",function(){
-            // debugger
-            document.getElementById("lishi").style.display="none";
-        })
-    </script>
+
+        .google #google_logo {
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+            clear: both;
+            padding-top: 112px;
+            padding-bottom: 20px;
+        }
+
+        .form {
+            text-align: center;
+        }
+
+        #form-search {
+            width: 450px;
+            line-height: 32px;
+            padding: 20px 10px;
+            border-radius: 45px;
+        }
+
+        #form-search:hover {
+            background-color: #a87f7f;
+            padding-top: 0;
+        }
+
+        .form #form-search {
+            padding: 0 8px;
+        }
+
+        .buttons {
+            text-align: center;
+            padding-top: 30px;
+            margin-bottom: 300px;
+            
+        }
+        /* #google_search #im_feeling_lucky{
+            border: none;
+            background-color: #3b1717;
+            border-radius: 30px;
+        } */
+
+
+
+
+
+        footer {
+            background: #f2f2f2;
+            border-top: solid 2px #e4e4e4;
+            bottom: 0;
+            padding-bottom: 0;
+            width: 100%;
+
+        }
+
+        footer ul li {
+            display: inline;
+            padding: 10px;
+            float: left;
+        }
+
+        footer ul {
+            float: left;
+            padding: 1px;
+        }
+
+        footer ul a:hover {
+            text-decoration: underline;
+        }
+
+        .footer_right {
+            float: right;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- 头部部分 -->
+    <header>
+        <nav>
+            <ul id="nav_bar">
+                <li class="nav_links"><a href="#">Gmail</a></li>
+                <li class="nav_links"><a href="#">Image</a></li>
+                <li><img src="../icons/bars.png"></a></li>
+                <li id="sign_in"><a href="#">sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+
+    <div class="google">
+        <a href="#" id="google_logo"><img src="../icons/google.png" /></a>
+    </div>
+    <div class="form">
+        <form>
+            <label for="form-search"></label>
+            <input type="text" id="form-search" placeholder="Search Google or type URL">
+        </form>
+    </div>
+
+    <div class="buttons">
+        <input type="submit" value="Google Search" id="google_search">
+        <input type="submit" value="I'm Feeling Lucky" id="im_feeling_lucky">
+    </div>
+
+
+    <!--footer部分-->
+    <footer>
+        <ul class="footer_left">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Advertising</a></li>
+            <li><a href="#">Business</a></li>
+            <li><a href="#">How Search Works</a></li>
+        </ul>
+        <ul class="footer_right">
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+
+    </footer>
+
+</body>
+
 </html>
