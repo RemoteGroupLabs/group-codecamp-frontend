@@ -7,16 +7,14 @@ on:
     inputs:
       enviroment:
         type: choice
-        description: 'upadata enviroment'
+        description: 'Update which enviroment, right now only production'
         required: true
         default: 'main'
         options:
-          - 'ChiYmiya'
-          - 'Jingbo'
-          - 'docs'
-          - 'ldw'
-          - 'piprot'
-          - 'zhang'
+          - 'main'
+          - 'dev'
+          - 'test'
+          
 
 jobs:
   build:
