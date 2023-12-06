@@ -1,0 +1,50 @@
+name: Contributors
+on: workflow_dispatch
+    # schedule:
+        # - cron: '5 * * * 0' # At 01:00 on Sunday.
+jobs:
+  contributors:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: wow-actions/contributors-list@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          svgPath: CONTRIBUTORS.svg
+          svgWidth: 900
+          avatarSize: 148
+          avatarMargin: 20
+          userNameHeight: 20
+          svgTemplate: >
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            version="1.1"
+            width="{{ width }}"
+            height="{{ collaboratorsHeight }}"
+            >
+            {{{ collaborators }}}
+            </svg>
+          itemTemplate: >
+            <g transform="translate({{ x }}, {{ y }})">
+              <a xlink:href="{{{ url }}}" class="contributor-link" target="_blank" rel="nofollow sponsored" title="{{{ name }}}" id="{{{ name }}}">
+                <image width="{{ width }}" height="{{ height }}" xlink:href="{{{ avatar }}}" />
+                <text x="74" y="168" text-anchor="middle" alignment-baseline="middle" font-size="14">{{{ name }}}</text>
+              </a>
+            </g>
+
+
+# name: Contribute List
+# on:
+#     push:
+#         branches:
+#             - main
+
+# jobs:
+#     contrib-readme-job:
+#         runs-on: ubuntu-latest
+#         name: A job to automate contrib in readme
+#         steps:
+#             - name: Contribute List
+#               uses: akhilmhdh/contributors-readme-action@v2.3.6
+#               env:
+#                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
