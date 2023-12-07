@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+        <style>
+            .timer{
+                width: 200px;
+                margin: 0px auto;
+                border: 1px solid black;
+                padding: 5px 10px;
+            }
+            .paragragh{
+                text-align: center;
+                margin-left: -140px;
+                display: none;
+            }
+            .count_down{
+                font-size: 30px;
+                font-weight: bold;
+                color: brown;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <div class="timer">
+            <span id="count" class="count_down">
+                10
+            </span>
+            <span class="charater">
+                秒
+            </span>
+        </div>
+        <p class="paragragh">
+            <strong>倒计时结束</strong>
+        </p>
+
+    </body>
+    <script>
+        var count = 10;
+        var countdown = document.getElementById("count");
+        function countDown(){
+            var result = setInterval(function (){
+                if (count > 0) {
+                count--;
+                countdown.textContent = count;
+            }
+            if (count <= 0){
+                clearInterval(result);
+                document.getElementsByClassName("paragragh")[0].style.display= "block";
+            }
+            }, 1000);
+        }
+        countDown();
+
+
+    </script>
+</html>
