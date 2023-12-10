@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>倒计时器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><button onclick="start_time()">开始</button></li>
+                <li><button onclick="stop_time()">暂停</button></li>
+                <li><button onclick="reset_time()">重置</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <p class="title">
+            这是一个倒计时器</p>
+        <div class="back">
+            <!-- <p id="settime">点击这里设置时间</p> -->
+            <div class="timesetbox">
+                <p class="title shuru">请输入：</p>
+                <div class="searchBox">
+                    <div class="inputbox">
+                        <div class="type">
+                            <textarea name="" id="searcharea" rows="1"></textarea>
+                            <p class="danwei">秒</p>
+                            <button class="danwei quding" onclick="input_settime()">确定</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="img">
+                    <ion-icon name="Alarm-outline" class="time_img"></ion-icon>
+                </div>
+                <div class="timebox" onclick="">
+                    <div class="time"></div>
+                    <span class="font">0</span>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="timesetback">
+        </div> -->
+    </main>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="script.js"></script>
+</html>

@@ -1,0 +1,219 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+header,
+nav ul {
+    width: 100%;
+}
+
+nav ul {
+    text-decoration: none;
+    padding-top: 12px;
+    padding-left: 7px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 50px 9px;
+}
+
+button {
+    font-size: 14px;
+    background-color: #EEEEEE;
+    padding: 4px 8px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:active {
+    box-shadow: 0px 0px 7.6px 3.3px rgba(140, 140, 140, 0.3);
+}
+
+main {
+    height: calc(100% - 39.2px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center
+}
+
+.box {
+    width: 165px;
+    height: 165px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 21px;
+    box-shadow: 0px 0px 7.6px 3.3px rgba(140, 140, 140, 0.3);
+    border-radius: 11px;
+    margin-top: 20px;
+}
+
+.time {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: black;
+    transition: all 0.1s;
+}
+
+.timebox{
+    position: relative;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin-left: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img {
+    width: 25px;
+    height: 25px;
+    margin-left: -5px;
+    position: relative;
+}
+
+.font {
+    font-size: 42px;
+    font-weight: 900;
+    color: #fff;
+    position: absolute;
+    top: 9px;
+    left: 24px;
+}
+
+.time_img {
+    color: #9AD7F8;
+    font-size: 37px;
+    --ionicon-stroke-width: 60px;
+    position: absolute;
+    left: -8px;
+    top: -6px;
+}
+
+.settime {
+    width: 100%;
+    height: 70px;
+    position: absolute;
+}
+
+p {
+    color: #484040;
+    text-align: center;
+}
+
+.title {
+    width: 100%;
+    font-size: 55px;
+    font-weight: 900;
+    letter-spacing: 29px;
+    color: #484040;
+}
+
+#settime {
+    position: absolute;
+    width: 165px;
+    height: 165px;
+    cursor: pointer;
+    line-height: 53px;
+}
+
+.back {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.timesetback {
+    position: fixed;
+    width: 100%;
+    height: 105%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap
+}
+
+.shuru {
+    line-height: 114px;
+    color: #474040;
+}
+
+.searchBox {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputbox {
+    position: relative;
+}
+
+.type {
+    position: relative;
+    width: 583px;
+    height: 46px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.type textarea:focus {
+    outline: none;
+}
+
+#searcharea {
+    position: absolute;
+    left: 44px;
+    top: 7px;
+    width: 443.4px;
+    height: 27px;
+    border: none;
+    resize: none;
+    font-family: arial, sans-serif;
+    font-size: 18px;
+    font-weight: 100;
+    caret-color: rgba(0, 0, 0, 0.5);
+    -webkit-caret-color: rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+    line-height: 27px;
+}
+
+.danwei {
+    position: absolute;
+    right: 80px;
+    top: 12px;
+}
+
+.quding {
+    right: 20px;
+    top: 10px;
+}
+
+.timesetbox{
+    width: 100%;
+}
+
+.guodu{
+    width: 55px;
+    height: 55px;
+    transition: all 0.1s;
+}
