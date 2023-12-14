@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * 
+        {
+            padding: 0;
+            margin: 0 auto;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+            border-radius: 50px;
+            margin-top: 100px;
+            text-align: center;
+            line-height: 200px;
+            font-size: 30px;
+        }
+
+        button 
+        {
+            width: 80px;
+            height: 40px;
+            margin-top: 20px;
+            border: 1px solid #000;
+            border-radius: 5px;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='box'>60</div>
+    <button type='submit' name='btn' id='btn1' value=''>开始</button>
+    <button type='submit' name='btn' id='btn2' value=''>停止</button>
+    <button type='submit' name='btn' id='btn3' value=''>重置</button>
+    <script>
+        var boxObj = document.querySelector('#box');
+        var startObj = document.querySelector('#btn1');
+        var stopObj = document.querySelector('#btn2');
+        var resetObj = document.querySelector('#btn3');
+
+        var time = '';
+
+        var num = boxObj.innerHTML;
+
+        startObj.onclick = function()
+        {
+            time = setInterval
+            (
+                function ()
+                {
+                    var times = boxObj.innerHTML;
+                    times--;
+                    boxObj.innerHTML = times;
+                    if (times <= 0)
+                    {
+                        clearInterval(time);
+                        boxObj.innerHTML = "倒计时结束";
+                    }
+                }
+            ,1000);
+        }
+
+        stopObj.onclick = function () 
+        {
+            clearInterval(time);
+        }
+
+        resetObj.onclick = function()
+        {
+            boxObj.innerHTML = 1;
+        }
+
+    </script>
+</body>
+
+</html>
