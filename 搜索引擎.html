@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+
+    <style>
+        * 
+        {
+	        margin: 0px;
+	        padding: 0px;
+	        border: 0px;
+        }
+        a 
+        {
+            text-decoration: none;
+        }
+
+        #container 
+        {
+            width: 800px;
+            height: 400px;
+            margin: 0 auto;
+            padding-top: 30px;
+            box-sizing: border-box;
+        }
+
+        .sea-container 
+        {
+            width: 450px;
+            height: 30px;
+            background-color: green;
+            margin: 100px auto;
+            border: 1px solid #317EF3;
+        }
+        .blue-input 
+        {
+            float: left;
+            width: 350px;
+            height: 30px;
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+        .blue-button 
+        {
+            width: 100px;
+            height: 30px;
+            background-color: #317EF3;
+            color: white;
+            font-size: 15px;
+        }
+
+    </style>
+
+</head>
+    <body>
+		<div id="container" class="center-justify">
+			<div class="sea-container">
+				<form action="">
+					<input type="text" name="search" class="blue-input" >
+					
+					<input type="submit" value="搜索" class="blue-button">
+				</form>
+				<p id="selectedId"></p>
+			</div>
+		</div>
+	</body>
+</html>
