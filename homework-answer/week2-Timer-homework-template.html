@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>倒计时器</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    .timer {
+      width: 200px;
+      height: 200px;
+      background-color: #fff;
+      border-radius: 10px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .countdown {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: #000;
+      text-align: center;
+      line-height: 100px;
+      font-size: 50px;
+      color: #fff;
+      font-weight: bold;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .message {
+      margin-top: 10px;
+      font-size: 20px;
+      color: #000;
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .icon {
+      width: 30px;
+      height: 30px;
+      margin-left: 10px;
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translate(0, -50%);
+    }
+
+    button {
+      background-color: #eee;
+      border: none;
+      border-radius: 5px;
+      padding: 5px 10px;
+      margin: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="timer">
+    <img class="icon" src="https://cdn-icons-png.flaticon.com/512/3003/3003202.png">
+    <span class="countdown"></span>
+    <span class="message"></span>
+  </div>
+
+  <button id="startButton">开始</button>
+  <button id="pauseButton">暂停</button>
+  <button id="resetButton">重置</button>
+
+  <script>
+    const countdown = document.querySelector(".countdown");
+    const message = document.querySelector(".message");
+    const startButton = document.getElementById("startButton");
+    const resetButton = document.getElementById("resetButton");
+    const pauseButton = document.getElementById("pauseButton")
+
+    let seconds = 10;
+    let interval;
+    let isPaused = false;
+    function clearTimerInterval(){
+      clearInterval(interval)
+      interval = null;
+    }
+    function startCountdown() {
+      if(interval){
+        return
+      }
+      interval = setInterval(() => {
+        seconds--;
+        countdown.textContent = seconds;
+        if (seconds <= 0) {
+          clearTimerInterval(interval);
+          message.textContent = "倒计时结束";
+        }
+      }, 1000);
+    }
+
+    function pauseCountdown() {
+      isPaused = !isPaused;
+      if (isPaused) {
+        clearTimerInterval(interval);
+        pauseButton.innerHTML = "<span style='color:red;'>恢复</span>"
+      } else {
+        pauseButton.textContent = "暂停"
+        interval = setInterval(() => {
+          seconds--;
+          countdown.textContent = seconds;
+          if (seconds <= 0) {
+            clearTimerInterval(interval);
+            message.textContent = "倒计时结束";
+          }
+        }, 1000);
+      }
+    }
+
+    startButton.addEventListener("click", startCountdown);
+
+    resetButton.addEventListener("click", () => {
+      clearTimerInterval(interval);
+      seconds = 10;
+      countdown.textContent = seconds;
+      message.textContent = "";
+    });
+
+    pauseButton.addEventListener("click", pauseCountdown);
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>倒计时器</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    .timer {
+      width: 200px;
+      height: 100px;
+      border: 1px solid #ccc;
+      margin: 0 auto;
+    }
+
+    .countdown {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: #fff;
+      text-align: center;
+      line-height: 100px;
+      font-size: 50px;
+      color: #000;
+      font-weight: bold;
+    }
+
+    .message {
+      margin-top: 10px;
+      font-size: 20px;
+      color: #000;
+    }
+
+    .countdown::after {
+      content: " 秒";
+      font-size: 20px;
+      color: #ccc;
+    }
+
+    .icon {
+      width: 50px;
+      height: 50px;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="timer">
+    <div class="countdown">
+      <img class="icon" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/stopwatch.svg">
+      <span></span>
+    </div>
+    <div class="message"></div>
+  </div>
+
+  <script>
+    const countdown = document.querySelector(".countdown");
+    const message = document.querySelector(".message");
+
+    function startCountdown() {
+      let seconds = 10;
+      let interval = setInterval(() => {
+        seconds--;
+        countdown.textContent = seconds;
+        if (seconds <= 0) {
+          clearInterval(interval);
+          message.textContent = "倒计时结束";
+        }
+      }, 1000);
+    }
+
+    startCountdown();
+  </script>
+</body>
+</html>
