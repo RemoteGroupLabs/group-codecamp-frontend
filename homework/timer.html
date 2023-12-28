@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>倒计时</title>
+    <style>
+        .secound {
+            color: gray;
+
+        }
+
+        .timer {
+            width: 300px;
+            margin: 0px auto;
+            border: 1px solid red;
+            padding: 50px 50px;
+
+        }
+        
+        .end {
+            text-align: center;
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="timer">
+        <span>
+            <span id="count">10</span>
+            <span class="secound">秒</span>
+        </span>
+    </div>
+    <p class="end">倒计时结束</p>
+    <script>
+        var count = 10;
+        var countdown = document.getElementById('count');
+        function count_down() {
+
+            var intervar = setInterval(() => {
+                if (count > 0) {
+                    count--;
+                    countdown.textContent = count;
+                } else {
+                    clearInterval(intervar);
+                    document.getElementsByClassName('end')[0].style.display = "block"
+
+                }
+            }, 1000);
+
+
+        }
+        count_down();
+
+    </script>
+
+</body>
+
+</html>
