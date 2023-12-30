@@ -42,9 +42,12 @@
 ## 第一章 HTML篇
 
 1. 列出主要的html标签。
-<!DOCTYPE>
+```html
 <html>
-<head></head>
+<head lang="en">
+  <title></title>
+  <meta charset="UTF-8">
+</head>
 <body>
 <header></header>
 <main>
@@ -52,23 +55,30 @@
 <span></span>
 <a>
 <p><i></i><b></b></p>
-<tb>
+<table></table>
 <h1><h2><h3><h4><h5><h6>
 <ul><li></li></ul>
 <ol><li></li></ol>
 <button>
 <img>
+<hr>
 </main>
 </body>
 </html>
+```
 2. 列出主要的html标签特性(Attributes比如class等)。
-href, src, input, title, alt, i(斜体)，b(粗体), class, id
+href, src, input, type, alt, class, id, border, 
 3. 结束标签可选的有哪些？是什么意思？
+```html
+<img scr="..." /> <!--补充-->
 
+```
 4. id和class的区别？（按几点列出）。
-
+id只能标记一个元素；class可标记多个元素
 5. 块级元素和内联元素分别有哪些？有什么区别？
-
+块级：p标签，div标签
+内联：a标签，img标签，span标签。
+区别：块级元素是默认占屏幕一行的（两个连续的块级元素默认不会并列显示）；内联元素是可以并排显示在同一行的
 
 
 ## 第二章 CSS篇
@@ -112,10 +122,10 @@ body #container-1 .section #paragraph-1.paragraph {
 > https://github.com/wwwebman/js-books-backpack
 
 2. (可选）什么是数据类型？
-
+字符、字符串、整数、小数、布尔值
 3. Javascript有哪些数据类型？
 
-4. 什么事函数？如何调用函数？
+4. 什么是函数？如何调用函数？
 
 5. (可选）NaN是什么？属于上面哪种数据类型？如何检查某个变量是否是NaN？
 
