@@ -11,18 +11,18 @@
 
 1. 什么是互联网？
 [ ] a. Google/Baidu
-[ ] b. 万维网 World Wide Web
+[x] b. 万维网 World Wide Web
 [ ] c. 通过网络连接在一起的所有电脑
 [ ] d. 以上全部
 
 2. 什么是浏览器？
 [ ] a. 一个HTML系统
 [ ] b. 一个服务器
-[ ] c. 一个可以用于访问www文档的软件
+[x] c. 一个可以用于访问www文档的软件
 [ ] d. 搜索软件
 
 3. URL是什么？
-[ ] a. 通用资源定位器，也称为地址
+[x] a. 通用资源定位器，也称为地址
 [ ] b. 一个Http
 [ ] c. 万维网WWW
 [ ] d. 都不是
@@ -30,21 +30,21 @@
 4. (可选）ISP是什么？
 [ ] a. 一块用于连接其他电脑的电脑设备
 [ ] b. 网络服务提供商Internet Service Provider
-[ ] c. 一份明确定义电脑之间如何连接的协议
+[x] c. 一份明确定义电脑之间如何连接的协议
 [ ] d. 都不是
 
 5. (可选) 域名后缀(.org, .com, .cn等)是什么？
 [ ] a. 用户网络或地址的名称
 [ ] b. 邮箱地址
-[ ] c. 通用资源定位器URI(Uniform Resource Locators)
+[x] c. 通用资源定位器URI(Uniform Resource Locators)
 [ ] d. 都不是
 
 ## 第一章 HTML篇
 
 1. 列出主要的html标签。
-
+<head>,<body>,<div>,<span>,<a>,<p>,<tb>,<h1>,<ul>,<li>,<main>,<header>,<button>,<img>
 2. 列出主要的html标签特性(Attributes比如class等)。
-
+href, src, input, title, alt, i(斜体)，b(粗体)
 3. 结束标签可选的有哪些？是什么意思？
 
 4. id和class的区别？（按几点列出）。
