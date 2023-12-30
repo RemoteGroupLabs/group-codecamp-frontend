@@ -42,9 +42,27 @@
 ## 第一章 HTML篇
 
 1. 列出主要的html标签。
-<head>,<body>,<div>,<span>,<a>,<p>,<tb>,<h1>,<ul>,<li>,<main>,<header>,<button>,<img>
+<!DOCTYPE>
+<html>
+<head></head>
+<body>
+<header></header>
+<main>
+<div></div>
+<span></span>
+<a>
+<p><i></i><b></b></p>
+<tb>
+<h1><h2><h3><h4><h5><h6>
+<ul><li></li></ul>
+<ol><li></li></ol>
+<button>
+<img>
+</main>
+</body>
+</html>
 2. 列出主要的html标签特性(Attributes比如class等)。
-href, src, input, title, alt, i(斜体)，b(粗体)
+href, src, input, title, alt, i(斜体)，b(粗体), class, id
 3. 结束标签可选的有哪些？是什么意思？
 
 4. id和class的区别？（按几点列出）。
